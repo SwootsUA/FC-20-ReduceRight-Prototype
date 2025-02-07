@@ -24,7 +24,7 @@ function MyArrayPrototype() {
         return this.length;
     };
 
-    this.myReduce = function (callback, initialValue) {
+    this.reduce = function (callback, initialValue) {
         let accumulator;
         let startingIndex;
 
@@ -47,7 +47,7 @@ function MyArrayPrototype() {
         return accumulator;
     };
 
-    this.myReduceRight = function (callback, initialValue) {
+    this.reduceRight = function (callback, initialValue) {
         let accumulator;
         let startingIndex;
 
@@ -73,7 +73,7 @@ function MyArrayPrototype() {
 
 const myArrayObj = new MyArray(1, 2, 3, 4, 5);
 
-const rightSum = myArrayObj.myReduceRight((accumulator, item) => {
+const rightSum = myArrayObj.reduceRight((accumulator, item) => {
     console.log(`accumulator: ${accumulator}, item: ${item}`);
     return accumulator + item;
 });
